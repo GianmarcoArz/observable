@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-6 card" *ngFor="let singolEll of elemento">
       <img
-        src="{{ singolEll.images[0] }}"
+        src="{{ singolEll.thumbnail }}"
         class="card-img-top imgcard"
         alt="img"
       />
@@ -12,14 +12,9 @@
         <p class="card-text">
           {{ singolEll.description }}
         </p>
-        <button
-          (click)="save(singolEll)"
-          routerLink="/app-carrello"
-          class="btn btn-primary"
-        >
-          Salva
-        </button>
+        <button (click)="save(singolEll)" class="btn btn-primary">Salva</button>
       </div>
     </div>
   </div>
 </div>
+<app-carrello></app-carrello>

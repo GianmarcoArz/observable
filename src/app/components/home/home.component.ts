@@ -15,7 +15,6 @@ export class HomeComponent {
   ngOnInit() {
     this.elementiSvc.getAllElement().subscribe((singolEll) => {
       this.elemento = singolEll;
-      console.log(this.elemento);
     });
   }
   save(product: iProduct) {
