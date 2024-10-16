@@ -1,0 +1,21 @@
+<h2 class="bg-info text-center">COSA HAI SALVATO NEL CARELLO ?</h2>
+<div class="container">
+  <div class="row" *ngIf="preferiti.length > 0; else noItems">
+    <div class="col-6 card" *ngFor="let elemento of preferiti">
+      <img
+        src="{{ elemento.images[0] }}"
+        class="card-img-top imgcard"
+        alt="img"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ elemento.title }}</h5>
+        <p class="card-text">
+          {{ elemento.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noItems>
+    <p class="text-center">Non hai ancora salvato nulla nel carrello.</p>
+  </ng-template>
+</div>

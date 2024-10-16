@@ -1,0 +1,25 @@
+<h1 class="text-bg-info text-center">PRODOTTI IN INVENTARI</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-6 card" *ngFor="let singolEll of elemento">
+      <img
+        src="{{ singolEll.images[0] }}"
+        class="card-img-top imgcard"
+        alt="img"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ singolEll.title }}</h5>
+        <p class="card-text">
+          {{ singolEll.description }}
+        </p>
+        <button
+          (click)="save(singolEll)"
+          routerLink="/app-carrello"
+          class="btn btn-primary"
+        >
+          Salva
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
