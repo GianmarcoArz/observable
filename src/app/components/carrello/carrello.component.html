@@ -1,7 +1,8 @@
 <h2 class="bg-info text-center">COSA HAI SALVATO NEL CARELLO ?</h2>
+
 <div class="container">
-  <div class="row" *ngIf="preferiti.length > 0; else noItems">
-    <div class="col-6 card" *ngFor="let elemento of preferiti">
+  <div class="row">
+    <div class="card" *ngFor="let elemento of preferiti">
       <img
         src="{{ elemento.images[0] }}"
         class="card-img-top imgcard"
